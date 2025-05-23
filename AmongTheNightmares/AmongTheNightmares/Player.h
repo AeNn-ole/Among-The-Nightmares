@@ -1,7 +1,6 @@
 #pragma once
 #include "Item.h"
-#include "Enemy.h"
-#include<vector>
+#include <vector>
 
 class Player {
 private:
@@ -12,10 +11,10 @@ private:
 	std::vector<Item> inventory;
 	unsigned int Fear;
 public:
-	unsigned int GetFear();
-	unsigned int GetCalmness();
-	unsigned int GetMind();
-	unsigned int GetStrength();
-	unsigned int GetSpeed();
-	void TakeFear(Enemy& Enemy);
+	unsigned int GetFear()const;
+	unsigned int GetCalmness()const;
+	unsigned int GetMind()const;
+	unsigned int GetStrength()const;
+	unsigned int GetSpeed()const;
+	void ApplyFear(unsigned int FearAmount);
 };
