@@ -16,6 +16,5 @@ unsigned int Weapon::GetSpeed_W() const {
 	return speed;
 }
 
-void Weapon::Use(Enemy& enemy)  {
 
-}
+

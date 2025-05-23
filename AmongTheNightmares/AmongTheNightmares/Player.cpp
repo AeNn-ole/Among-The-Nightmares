@@ -23,3 +23,18 @@ unsigned int Player::GetFear() const {
 void Player::ApplyFear(unsigned int FearAmount) {
 	Fear += FearAmount;
 }
+
+void Player::AddItem(Weapon& weapon) {
+	inventory.push_back(weapon);
+}
+
+void Player::DelItem(int i) {
+	if(inventory.size() > i){
+		inventory.erase(inventory.begin() + i);
+	}
+	
+}
+
+Weapon Player::GetWeapon(int i) {
+	return inventory[i];
+}

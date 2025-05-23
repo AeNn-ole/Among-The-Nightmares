@@ -1,9 +1,7 @@
 #pragma once
-#include "Item.h"
 
-class Enemy;
 
-class Weapon : public Item {
+class Weapon {
 private:
 	unsigned int calmness;
 	unsigned int mind;
@@ -14,5 +12,5 @@ public:
 	unsigned int GetMind_W()const;
 	unsigned int GetStrength_W()const;
 	unsigned int GetSpeed_W()const;
-	void Use(Enemy& enemy);
+	Weapon(unsigned int calmness, unsigned int mind, unsigned int strength, unsigned int speed) : calmness(calmness), mind(mind), strength(strength), speed(speed){};
 };

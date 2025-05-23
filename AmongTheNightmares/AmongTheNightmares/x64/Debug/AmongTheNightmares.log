@@ -1,5 +1,5 @@
 ﻿  Enemy.cpp
 C:\Users\Евгений\Documents\GitHub\Among-The-Nightmares\AmongTheNightmares\AmongTheNightmares\Enemy.cpp(37,26): warning C4244: инициализация: преобразование "double" в "unsigned int", возможна потеря данных
-  Weapon.cpp
+  Player.cpp
   Создание кода...
   AmongTheNightmares.vcxproj -> C:\Users\Евгений\Documents\GitHub\Among-The-Nightmares\AmongTheNightmares\x64\Debug\AmongTheNightmares.exe
