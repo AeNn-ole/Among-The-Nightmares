@@ -37,3 +37,7 @@ void Enemy::TakeFear(Player& player) {
 	unsigned int FearAmount = Sum() * 1.4;
 	player.ApplyFear(FearAmount);
 }
+
+std::string Enemy::GetName() const {
+	return Name;
+}

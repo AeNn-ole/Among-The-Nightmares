@@ -5,9 +5,17 @@
 
 class Room {
 private:
+	int RoomId;
 	std::string RoomText;
-	std::vector <Weapon> Loot_W;
-	std::vector <Enemy> enemies;
+	Weapon weapon;
+	Enemy enemy;
+	std::vector<int> roomids;
 public:
-
+	Room(int id, std::string text, Enemy enemy, std::vector<int> ids, Weapon weapon) : RoomId(id), RoomText(text), enemy(enemy), weapon(weapon) {
+		roomids = ids;
+	};
+	std::vector<int> GetIds();
+	void RoomInfo();
+	bool IsEnemy() const;
+	Weapon& GetWeapon();
 };

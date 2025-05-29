@@ -16,5 +16,11 @@ unsigned int Weapon::GetSpeed_W() const {
 	return speed;
 }
 
+std::string Weapon::GetName() const {
+	return name;
+}
 
+void Weapon::SetName(std::string n) {
+	name = n;
+}
 

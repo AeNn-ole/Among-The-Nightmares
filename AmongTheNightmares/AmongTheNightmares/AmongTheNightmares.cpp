@@ -1,9 +1,9 @@
-﻿
+﻿#include <iostream>
+#include "Room.h"
+#include "Loader.h"
+#include "Game.h"
 
-#include <iostream>
-
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    Game game;
 }
 
