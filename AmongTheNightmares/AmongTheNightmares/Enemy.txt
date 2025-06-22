@@ -1,2 +1,8 @@
 1
 10 10 10 10 Kakashke
+2
+15 15 15 15 Bugagashke
+3
+20 20 20 20 Svetofor
+4
+22 22 22 22 Buba

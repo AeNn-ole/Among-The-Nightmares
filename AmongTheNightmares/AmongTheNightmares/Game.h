@@ -1,4 +1,5 @@
-#pragma once
+#ifndef GAME_H
+#define GAME_H
 #include "Player.h"
 #include "Loader.h"
 #include <iostream>
@@ -11,8 +12,8 @@ private:
 	Loader loader;
 	int location = 1;
 	std::vector<Room> rooms;
-	int CurrentId = 0;
-	int PrevId = 0;
+	int current_id = 0;
+	int prev_id = 0;
 public:
 	void SetPRId(int id);
 	void SetId(int Id);
@@ -20,3 +21,5 @@ public:
 	void Run();
 	Game();
 };
+
+#endif 

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef LOADER_H
+#define LOADER_H
+
 #include <fstream>
 #include <string>
 #include <vector>
@@ -14,3 +16,5 @@ public:
 	Weapon LoadWeapon(int id);
 	Enemy LoadEnemy(int id);
 };
+
+#endif 

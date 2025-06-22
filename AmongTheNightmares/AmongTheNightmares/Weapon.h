@@ -1,4 +1,5 @@
-#pragma once
+#ifndef WEAPON_H
+#define WEAPON_H
 #include <iostream>
 
 class Weapon {
@@ -17,3 +18,5 @@ public:
 	void SetName(std::string n);
 	Weapon(unsigned int calmness = 0, unsigned int mind = 0, unsigned int strength = 0, unsigned int speed = 0, std::string name = "kek") : calmness(calmness), mind(mind), strength(strength), speed(speed), name(name){};
 };
+
+#endif 

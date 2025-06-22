@@ -1,6 +1,6 @@
-2
+5
 
-You wake up from the knock of branches through the window. The rings of thunder are heard. There is pouring rain.
+Dark children's bedroom. With many toys, she looked much more comfortable.
 0
 1 2
 0
@@ -12,5 +12,22 @@ You went into a tiny bath a room where your mother’s things are scattered.
 0
 0
 
+Long dark corridor. You see a staircase at the end.
+2
+0 3
+0
+2
+
+You went down to the kitchen. Water flows from the tap. On the table only empty plates without food.
+3
+2 4
+1
+0
+
+Previously a cozy hall, where you and dad like to watch football so much
+4
+3 5
+2
+1
 
  

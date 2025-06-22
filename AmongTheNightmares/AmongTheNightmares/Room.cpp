@@ -1,7 +1,7 @@
 #include "Room.h"
 
 void Room::RoomInfo() {
-	std::cout << RoomText << std::endl;
+	std::cout << room_text << std::endl;
 	if (enemy.GetName() != "Bub") {
 		std::cout << "You have enemy in room. His name is: " << enemy.GetName() << std::endl;
 	}
@@ -20,4 +20,8 @@ std::vector <int> Room::GetIds(){
 
 Weapon& Room::GetWeapon() {
 	return weapon;
+}
+
+Enemy& Room::GetEnemy() {
+	return enemy;
 }

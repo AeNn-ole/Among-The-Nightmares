@@ -5,7 +5,7 @@ void Loader::LoadLocation (int LocId, std::vector<Room>& rooms) {
 	if (LocId == 1) {
 		std::ifstream file("location1.txt");
 		std::string line, text;
-		int count = 0, roomid = 0, valroom = 0, valitems = 0, enemyid = 0, weapid = 0;
+		int count = 0, room_id = 0,  enemy_id = 0, weap_id = 0;
 		
 		std::getline(file, line);
 		count = stoi(line);
@@ -16,7 +16,7 @@ void Loader::LoadLocation (int LocId, std::vector<Room>& rooms) {
 		std::getline(file, text);
 		
 		std::getline(file, line);
-		roomid = stoi(line);
+		room_id = stoi(line);
 
 		std::getline(file, line);
 		std::istringstream ss(line);
@@ -25,12 +25,12 @@ void Loader::LoadLocation (int LocId, std::vector<Room>& rooms) {
 			nextid.push_back(num);
 		}
 		std::getline(file, line);
-		enemyid = stoi(line);
+		enemy_id = stoi(line);
 
 		std::getline(file, line);
-		weapid = stoi(line);
+		weap_id = stoi(line);
 
-		rooms.push_back(Room(roomid, text, LoadEnemy(enemyid), nextid, LoadWeapon(weapid)));
+		rooms.push_back(Room(room_id, text, LoadEnemy(enemy_id), nextid, LoadWeapon(weap_id)));
 		}
 	}
 }
@@ -45,7 +45,7 @@ Enemy Loader::LoadEnemy(int id) {
 	}
 	while (!file.eof()) {
 		std::getline(file, line);
-		if (id < stoi(line)) {
+		if (id > stoi(line)) {
 			getline(file, line);
 		}
 		else if (id == stoi(line)) {
@@ -68,7 +68,7 @@ Weapon Loader::LoadWeapon(int id) {
 	}
 	while (!file.eof()) {
 		std::getline(file, line);
-		if (id < stoi(line)) {
+		if (id > stoi(line)) {
 			getline(file, line);
 		}
 		else if (id == stoi(line)) {

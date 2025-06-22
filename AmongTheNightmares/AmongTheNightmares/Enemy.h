@@ -1,15 +1,17 @@
-#pragma once
+#ifndef ENEMY_H
+#define ENEMY_H
 #include "Weapon.h"
 #include "Player.h"
 #include <iostream>
 
 class Enemy {
 private:
-	unsigned int Dilligence;
-	unsigned int Summary;
-	unsigned int Strength;
-	unsigned int Speed;
-	std::string Name;
+	unsigned int dilligence;
+	unsigned int summary;
+	unsigned int strength;
+	unsigned int speed;
+	std::string name;
+	bool alive = true;
 public:
 	std::string GetName() const;
 	unsigned int GetDilligence()const;
@@ -17,8 +19,15 @@ public:
 	unsigned int GetStrength()const;
 	unsigned int GetSpeed()const;
 	unsigned int Sum()const;
+	bool IsAlive() const;
+	void SetAlive();
 	void TakeDMG(Weapon& weapon);
 	void DealDMG(Player& player);
-	void TakeFear(Player& player);
-	Enemy(unsigned int one = 0, unsigned int two= 0, unsigned int three = 0, unsigned int four = 0, std::string name = "Bub") : Dilligence(one), Summary(two), Strength(three), Speed(four) , Name(name){};
+	bool TakeFear(Player& player);
+	bool Fight(Player& player);
+	void Stats();
+	void SetName(std::string name);
+	Enemy(unsigned int one = 0, unsigned int two= 0, unsigned int three = 0, unsigned int four = 0, std::string name = "Bub") : dilligence(one), summary(two), strength(three), speed(four) , name(name){};
 };
+
+#endif 
