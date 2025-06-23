@@ -1,4 +1,4 @@
-5
+8
 
 Dark children's bedroom. With many toys, she looked much more comfortable.
 0
@@ -24,10 +24,31 @@ You went down to the kitchen. Water flows from the tap. On the table only empty 
 1
 0
 
-Previously a cozy hall, where you and dad like to watch football so much
+Previously a cozy hall, where you and dad like to watch football so much.
 4
-3 5
+3 5 6
 2
 1
+
+Dark pantry without windows. The lamp does not want to ignite.
+5
+4
+0
+3
+
+Garden in the yard. All flowers rotted.
+6
+4
+3
+0
+
+bu
+7
+6
+0
+0
+
+
+
 
  

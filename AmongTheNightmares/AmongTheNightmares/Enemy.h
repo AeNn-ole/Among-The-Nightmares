@@ -11,7 +11,7 @@ private:
 	unsigned int strength;
 	unsigned int speed;
 	std::string name;
-	bool alive = true;
+	bool alive;
 public:
 	std::string GetName() const;
 	unsigned int GetDilligence()const;
@@ -23,11 +23,9 @@ public:
 	void SetAlive();
 	void TakeDMG(Weapon& weapon);
 	void DealDMG(Player& player);
-	bool TakeFear(Player& player);
-	bool Fight(Player& player);
 	void Stats();
 	void SetName(std::string name);
-	Enemy(unsigned int one = 0, unsigned int two= 0, unsigned int three = 0, unsigned int four = 0, std::string name = "Bub") : dilligence(one), summary(two), strength(three), speed(four) , name(name){};
+	Enemy(unsigned int one = 0, unsigned int two= 0, unsigned int three = 0, unsigned int four = 0, std::string name = "Bub") : dilligence(one), summary(two), strength(three), speed(four) , name(name), alive(true){};
 };
 
 #endif 

@@ -44,8 +44,6 @@ void Player::DelItem(int i) {
 	if(inventory.size() > i){
 		inventory.erase(inventory.begin() + i);
 	}
-	
-	
 }
 
 Weapon& Player::GetWeapon(int i) {
@@ -63,6 +61,9 @@ void Player::Status() {
 	Inventory();
 }
 
+void Player::SetFear(unsigned int fear_amount) {
+	fear = fear_amount;
+}
 void  Player::Inventory() {
 	int k = 0;
 	std::cout << "Your inventory: " << std::endl;
@@ -83,4 +84,21 @@ int Player::ChooseWeapon() {
 
 bool Player::IsAlive() {
 	return fear >= 100;
+}
+
+void Player::Death() {
+	std::cout << "Nightmares captured your mind. \
+The legs are jammed, it darkens in your eyes, and you fall to the floor, losing control of your body. You will not wake up anymore ..." << std::endl;
+	int k = 0;
+	for (auto& i : inventory) {
+		calmness -= i.GetCalmness_W();
+		mind -= i.GetMind_W();
+		strength -= i.GetStrength_W();
+		speed -= i.GetSpeed_W();
+		if (inventory.size() >= k) {
+			inventory.erase(inventory.begin() + k);
+		}
+		k++;
+	}
+	SetFear(0);
 }

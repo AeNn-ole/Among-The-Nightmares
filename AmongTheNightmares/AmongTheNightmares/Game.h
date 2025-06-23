@@ -2,6 +2,7 @@
 #define GAME_H
 #include "Player.h"
 #include "Loader.h"
+#include "BattleController.h"
 #include <iostream>
 #include <windows.h>
 
@@ -10,11 +11,14 @@ class Game {
 private:
 	Player player;
 	Loader loader;
-	int location = 1;
+	int location;
 	std::vector<Room> rooms;
-	int current_id = 0;
-	int prev_id = 0;
+	int current_id;
+	int prev_id;
 public:
+	int GetCurrentId();
+	void Win();
+	bool IsWin();
 	void SetPRId(int id);
 	void SetId(int Id);
 	void Menu();

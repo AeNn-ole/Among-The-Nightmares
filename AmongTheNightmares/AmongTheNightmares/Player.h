@@ -17,6 +17,7 @@ public:
 	unsigned int GetMind()const;
 	unsigned int GetStrength()const;
 	unsigned int GetSpeed()const;
+	void SetFear(unsigned int fear_amount);
 	bool IsAlive();
 	void Inventory();
 	void SetStats(Weapon& weapon);
@@ -26,6 +27,7 @@ public:
 	Weapon& GetWeapon(int i);
 	int ChooseWeapon();
 	void Status();
+	void Death();
 };
 
 #endif 

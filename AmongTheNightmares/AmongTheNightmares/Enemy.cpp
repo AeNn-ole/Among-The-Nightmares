@@ -54,41 +54,11 @@ void Enemy::DealDMG(Player& player) {
 	player.ApplyFear(fear_amount);
 }
 
-bool Enemy::TakeFear(Player& player) {
-	unsigned int fear_amount = Sum() * 1.4;
-	player.ApplyFear(fear_amount);
-	SetName("Bub");
-	if (player.IsAlive()) {
-		return false;
-	}
-	return true;
-}
-
 std::string Enemy::GetName() const {
 	return name;
 }
 
-bool Enemy::Fight(Player& player) {
-	Stats();
-	int i = 0;
-	while (IsAlive()) {
-		if (i == 0) {
-			int k = player.ChooseWeapon();
-			TakeDMG(player.GetWeapon(k));
-			Stats();
-			player.DelItem(k);
-			i = 1;
-		}
-		else {
-			DealDMG(player);
-			i = 0;
-			if (player.IsAlive()) {
-				return false;
-			}
-		}
-	}
-	return true;
-}
+
 
 void Enemy::Stats() {
 	std::cout << GetName() << " Stats: ";
